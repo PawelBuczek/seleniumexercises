@@ -21,13 +21,16 @@ except:
     print("element was not found! Closing the browser")
     driver.quit()
 
+search.clear()
 search.send_keys("test")
 time.sleep(1)
 search.send_keys(Keys.ESCAPE)
 time.sleep(1)
 search.send_keys(Keys.RETURN)
 
-time.sleep(4)
+time.sleep(2)
+driver.back()
 
+time.sleep(2)
 driver.quit() # closes entire browser. driver.close() would close only the current tab
 
