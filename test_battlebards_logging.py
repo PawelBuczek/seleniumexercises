@@ -43,7 +43,7 @@ def test_battlebards_login():
 
     time.sleep(4)
     #logging Out - this apparently doesn't work yet
-    user_profile = get_element_by(driver, By.XPATH, "//*[@id='__next']/div[2]/div/div[2]/div[1]/div/nav/div/div[2]/div[2]/div[3]/div/div/p", 3.0)
+    user_profile = get_element_by(driver, By.XPATH, "//p[@class='header-name' and not(parent::div[@class='user-profile-div']/i)]", 3.0)
     user_profile.click()
     get_element_by(driver, By.XPATH, "//a[@class='signin-text logout-text']", 2.0).click()
     
